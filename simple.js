@@ -9,9 +9,8 @@ const ecc = require('tiny-secp256k1');
 const ECPair = ECPairFactory.ECPairFactory(ecc);
 
 //From funding transaction 
-const TX_ID = 'a6526375731c7e2677f9a8b2b2122e1b5c316a823072eddd9c80364f50b0afbd';
+const TX_ID = 'c3cf004604486e1a630efaa9e519709648be9867857644a1883210e9a6c1afaa';
 const VOUT = 0;
-const TX_HASH = '02000000000101e85917fd0509c84329864078e9ed4da0d1fdb0d46ec81edb352ebe326c2ad5a40000000000feffffff0200e1f505000000001600143e62c54881dd37418848d266a712018ff11dff0d7310102401000000160014a723e9cc41d51c72eb17be12db7cebe38c2819e402473044022016cad14bf612e14b33c33bf500e349fc777e88c0f56e14ef48036709a9fd83c30220326ecfd6f26407aa63b35fa0a90e318f1dd9bd539654a80ff773cf5cdb61cc71012102720cafaf7ce2cd5430cada4f1a21de6a6a7872d6b34c11c3cb4e1c5fb2089344cc000000';
 
 // Id of key generated in TSM
 keyId = 'T6ebdn3KJw31tXgG8JbpHBwVchO7';
@@ -29,7 +28,7 @@ async function example() {
             },
         })
         .addOutput({
-            address: bob[1].p2pkh,
+            address: bob[1].p2wpkh,
             value: 999e5,
         })
 
