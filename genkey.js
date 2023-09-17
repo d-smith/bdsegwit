@@ -58,6 +58,8 @@ let example = async function() {
     let [,derivedPubKey] = await tsmClient1.derive(algorithms.ECDSA, curves.SECP256K1, pk, chainCode, chainPath);
     let addressPubKey = await pk2Sec1Compressed(tsmClient1, derivedPubKey);
 
+    console.log(addressPubKey.toString('hex'))
+
     let address = bitcoin.payments.p2wpkh(
         {
             pubkey: addressPubKey,
